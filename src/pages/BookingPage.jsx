@@ -1,31 +1,32 @@
 import { useReducer } from "react";
 import { BookingForm } from "../components"
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const BookingPage = () => {
+  const navigate = useNavigate();
   const initializeTimes = () => {
     const today = new Date();
-    return fetchAPI(today);
+    return window.fetchAPI(today);
   };
   const updateTimes = (state, action) => {
     if (action.type === "UPDATE") {
       const selectedDate = new Date(action.date);
-      return fetchAPI(selectedDate);
+      return window.fetchAPI(selectedDate);
     }
     return state;
   };
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
   const submitForm = (formData) => {
-    const isSuccess = submitAPI(formData);
+    const isSuccess = window.submitAPI(formData);
     if (isSuccess) {
-      Navigate("/confirmed");
+      navigate("/confirmed");
     }
   };
 
   return (
-    <>
+    <div className="booking">
       <BookingForm availableTimes={ availableTimes } dispatch={ dispatch } submitForm={submitForm} />
-    </>
+    </div>
   )
 }

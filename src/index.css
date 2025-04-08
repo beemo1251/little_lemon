@@ -37,6 +37,11 @@ nav > div > ul {
   font-weight: 500;
 }
 
+nav > div > ul > .nav-link {
+  text-decoration: none;
+  color: #000;
+}
+
 /* Header Section */
 
 header {
@@ -88,6 +93,7 @@ header > .content-left > button {
   color: #000;
   font-size: 1.1rem;
   font-weight: 600;
+  cursor: pointer;
 }
 
 header > .content-right {
@@ -191,4 +197,103 @@ main > .highlights > .body_highlights > .card > .content-card > .action_card > a
   text-decoration: none;
   color: #000;
   font-weight: 600;
+}
+
+/* Form */
+.booking {
+  margin: 0px 20%;
+  display: flex;
+}
+.booking-form {
+  width: 100%;
+  margin: 50px auto;
+  padding: 30px 25px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: grid;
+  gap: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.booking-form label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.booking-form input,
+.booking-form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.booking-form input[type="submit"] {
+  background-color: #F4CE14;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form input[type="submit"]:hover {
+  background-color: #dbba12;
+}
+
+/* Confirmed */
+.confirmed {
+  height: 55vh;
+  margin: 50px 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+
+footer {
+  margin-top: 50px;
+  height: 250px;
+  background: #495E57;
+  display: flex;
+  align-items: center;
+}
+
+footer > .content-footer {
+  width: 100%;
+  margin: 40px 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+footer > .content-footer > .logo {
+  width: 100px;
+  margin: auto 0px;
+}
+
+footer > .content-footer > .logo > img {
+  width: 100%;
+}
+
+footer > .content-footer > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+footer > .content-footer > div > h4 {
+  font-size: 1.2rem;
+}
+
+footer > .content-footer > div > span {
+  cursor: pointer;
 }

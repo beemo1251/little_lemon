@@ -4,9 +4,9 @@ import { useForm } from "../hook/useForm";
 export const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const { formState, onInputChange } = useForm({
     date: new Date().toISOString().split("T")[0],
-    time: "17:00",
-    guests: "1",
-    occasion: "Birthday",
+    time: "",
+    guests: "",
+    occasion: "",
   });
 
   const [errors, setErrors] = useState({});
@@ -44,7 +44,7 @@ export const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
+    <form className="booking-form" onSubmit={handleSubmit}>
       <label htmlFor="res-date">Choose date</label>
       <input
         type="date"
@@ -88,7 +88,7 @@ export const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
       </select>
       {errors.occasion && <span style={{ color: "red" }}>{errors.occasion}</span>}
 
-      <input type="submit" value="Make Your reservation" />
+      <input type="submit" value="Make your reservation" />
     </form>
   );
 };
