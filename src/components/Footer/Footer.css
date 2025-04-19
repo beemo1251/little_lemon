@@ -1,0 +1,161 @@
+/* Footer.css */
+.footer {
+  background-color: #34433e;
+  color: white;
+  padding: 0rem 10% 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(244, 206, 20, 0.2);
+  margin-bottom: 2rem;
+}
+
+.footer-logo {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.1);
+}
+
+.footer-header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-header-text .title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #f4ce14;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.footer-header-text .subtitle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  margin-bottom: 1.5rem;
+}
+
+.footer-section h4 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #f4ce14;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #f4ce14;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.footer-section li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-section li:hover {
+  transform: translateX(5px);
+}
+
+.footer-section li::before {
+  content: '•';
+  color: #f4ce14;
+}
+
+.footer-section a {
+  color: rgb(201, 201, 201);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-section a:hover {
+  color: #f4ce14;
+  transform: translateX(5px);
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 0 10% 1rem;
+  }
+  
+  .footer-content {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .footer-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+  
+  .footer-header-text .title {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  .footer-logo {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section h4 {
+    font-size: 1.1rem;
+  }
+  
+  .footer-section li {
+    font-size: 0.9rem;
+  }
+}
